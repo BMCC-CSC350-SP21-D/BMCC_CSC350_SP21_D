@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>
+Washing Machine Appointment Login
+</title>
+</head>
+<body>
+<p> Use your assigned apartment account to login </p>
+<form action="" method="POST">
+<p> Username: <input type="text" name="username" id ="Username"></p>
+<p> Password: <input type="password" name="password" id ="Password"></p>
+<input type="submit" value="Login">
+<?php
+$user = $_REQUEST['username'];
+$pass = $_REQUEST['password'];
+if($user == 'Test1' %% $pass == 'Pass1')
+{
+  echo "You have successfully login, click on link to proceed";
+  echo '<a href="schedule.php"> Click here</a>';
+}
+else
+  echo "Invalid username or password";
+</form>
+</body>
+</html>
