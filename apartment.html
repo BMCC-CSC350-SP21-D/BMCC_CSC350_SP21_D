@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>apartment website design</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+		 <section class="header">
+		 	<nav>
+		 		<a href="apartment.html"><img src="logo.png"></a>
+		 		<div class="nav-links" id="navLinks">
+		 			<i><i class="fa fa-times"onclick="hideMenu()"></i>
+</i>
+		 			<ul>
+		 				<li><a href="">HOME</a></li>
+		 				<li><a href="">ABOUT</a></li>
+		 				<li><a href="">CONTACT</a></li>
+		 			</ul>
+		 			
+		 		</div>
+		 		<i class="fa fa-bars"onclick="showMenu()"></i>
+</i>
+		 	</nav>
+		 	<div class="text-main">
+		 		<h1>LAUNDRY APPOINTMENTS</h1>
+		 		<p>To make an appointment for laundry click the SIGN UP button below</p>
+		 		<a href=""class="button">SIGN UP</a>
+
+		 		
+		 	</div>
+		 </section>
+		 <!-----------java script---------->>
+		 <script>
+		 		var navLinks = document.getElementById("navLinks")
+		 		function showMenu(){
+		 			navLinks.style.right = "0";
+		 		}
+		 		function hideMenu(){
+		 			navLinks.style.right = "-200px";
+		 		}
+		  </script>
+</body>
+</html>
