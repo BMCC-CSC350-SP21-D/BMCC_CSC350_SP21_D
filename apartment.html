@@ -25,9 +25,9 @@
 		 	</nav>
 		 	<div class="wrapper">
 		 		<h1>Sign in</h1>
-		 		<form action="">
-		 			<input type="text" placeholder="Username">
-		 			<input type="Password" placeholder="Password">
+		 		<form name="loginform" onSubmit="return validateForm();" action="schedule.html" method="post">
+		 			<input type="text" name="username" placeholder="Username">
+		 			<input type="Password" name="password" placeholder="Password">
 		 			<input type="submit" value="LOGIN">
 		 		</form>
 		 		<div class="bottom-text">
@@ -48,6 +48,20 @@
 		 		function hideMenu(){
 		 			navLinks.style.right = "-200px";
 		 		}
+			 	 function validateForm() //function to validate login details
+			 	{
+        				var user = document.loginform.username.value;
+        				var pass = document.loginform.password.value;
+        				var username = "User1"; 
+        				var password = "Pass1";
+        				if ((user == username) && (pass == password)) {
+            					return true;
+        				}
+        				else {
+            				alert ("Login was unsuccessful, please check your username and password");
+            				return false;
+        				}
+  				}
 		  </script>
 </body>
 </html>
