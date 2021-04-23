@@ -1,0 +1,6 @@
+#To Be Updated
+Data Name 			Data Type 			Data Length 			Description
+username			character			1 - reasonable number	The variable where the user inserts their username to sign into the system
+password			character			1 - reasonable number	The variable where the user inertts their password to sign into the system
+login				function				N/A						Function to login into the system by checking username and password
+
