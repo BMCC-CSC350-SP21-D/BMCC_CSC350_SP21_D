@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +10,6 @@
          <section class="header">
             <nav>
                 <a href="login.php"><img src="logo.png"></a>
-                <div class="nav-links" id="navLinks">
-                    <i><i class="fa fa-times"onclick="hideMenu()"></i>
-</i>
-                    <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CONTACT</a></li>
-                    </ul>
-                    
-                </div>
-                <i class="fa fa-bars"onclick="showMenu()"></i>
-</i>
             </nav>
             <div class="wrapper">
                 <h1>LOGIN</h1>
