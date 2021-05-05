@@ -136,12 +136,8 @@ input[type=submit]:hover {
       <div class="col-25">
     <form action="/action_page.php">
   <p>washing time:</p>
-  <input type="radio" id="30 min" name="time" value="30 mins">
-  <label for="30 mins">30 min</label><br>
-  <input type="radio" id="60 min" name="time" value="60 mins">
-  <label for="60 mins">60 mins</label><br>
-  <input type="radio" id="90 min" name="time" value="90 mins">
-  <label for="other">90 mins</label>
+  <input type="radio" id="3 Hour" name="time" value="3h">
+  <label for="3h">3 Hours</label><br>
     <div class="row">
       <input type="submit" value="Submit">
     </div>
