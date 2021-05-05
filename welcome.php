@@ -1,78 +1,152 @@
-<!DOCTYPE html>
-<html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>apartment website design</title>
-	<link rel="stylesheet" href="stylesheet.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-		 <form action="login.php" method="post"></form>
-		 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
 }
 
-.flip-card {
-  width: 400px;
-	height: 420px;
-	color: #000;
-	top: 50%;
-	left: 50%;
-	padding: 60px 30px;
-	position: absolute;
-	transform: translate(-50%,-50%);
-	
-}
-
-.flip-card-inner {
-  position: relative;
+input[type=text], select, textarea {
   width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
 }
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-.flip-card-back {
-  background-color: #2980b9;
+input[type=submit] {
+  background-color: #04AA6D;
   color: white;
-  transform: rotateY(180deg);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+
+ 
 }
 
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 </style>
 </head>
 <body>
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src="avatar.png" alt="Avatar" style="width:300px;height:300px;">
+<h2>Fill this out to make an appointment</h2>
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">First Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
     </div>
-    <div class="flip-card-back">
-      <h1>welcome user</h1> 
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
     </div>
-  </div>
-</div>
-		 
-</body>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="Email" placeholder="Email">
+      </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="unit">unit</label>
+      </div>
+      <div class="col-75">
+        <select id="unit" name="unit">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
 
+          
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+    <form action="/action_page.php">
+  <p>washing time:</p>
+  <input type="radio" id="30 min" name="time" value="30 mins">
+  <label for="30 mins">30 min</label><br>
+  <input type="radio" id="60 min" name="time" value="60 mins">
+  <label for="60 mins">60 mins</label><br>
+  <input type="radio" id="90 min" name="time" value="90 mins">
+  <label for="other">90 mins</label>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+</body>
 </html>
