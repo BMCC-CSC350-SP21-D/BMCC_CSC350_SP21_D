@@ -21,10 +21,12 @@
             } 
             else{
                 echo "Invaild username or password";
+                header("location:login.php");
             }
         } 
         else {
             echo "Invaild username or password";
+            header("location:login.php");
             }
         }
 
