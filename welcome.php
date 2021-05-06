@@ -136,15 +136,29 @@ input[type=submit]:hover {
       <div class="col-25">
     <form action="/action_page.php">
   <p>washing time:</p>
-  <select id="time" name="time">
-    <option value="12AM-3AM">12AM-3AM</option>
-    <option value="3AM-6AM">3AM-6AM</option>
-    <option value="6AM-9AM">6AM-9AM</option>
-    <option value="9AM-12PM">9AM-12PM</option>
-    <option value="12PM-3PM">12PM-3PM</option>
-    <option value="3PM-6PM">3PM-6PM</option>
-    <option value="6PM-9PM">6PM-9PM</option>
-    <option value="9PM-12AM">9PM-12AM</option>
+  <div>
+	<select id="day" name="day">
+		<option value="monday">Monday</option>
+		<option value="tuesday">Tuesday</option>
+		<option value="wednesday">Wednesday</option>
+		<option value="thursday">Thursday</option>
+		<option value="friday">Friday</option>
+		<option value="saturday">Saturday</option>
+		<option value="sunday">Sunday</option>
+	</select>
+  </div>
+  <div>
+	<select id="time" name="time">
+		<option value="12AM-3AM">12AM-3AM</option>
+		<option value="3AM-6AM">3AM-6AM</option>
+		<option value="6AM-9AM">6AM-9AM</option>
+		<option value="9AM-12PM">9AM-12PM</option>
+		<option value="12PM-3PM">12PM-3PM</option>
+		<option value="3PM-6PM">3PM-6PM</option>
+		<option value="6PM-9PM">6PM-9PM</option>
+		<option value="9PM-12AM">9PM-12AM</option>
+	</select>
+  </div>
     <div class="row">
       <input type="submit" value="Submit">
     </div>
