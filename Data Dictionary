@@ -1,9 +1,8 @@
-#To Be Updated
-Data Name 			Data Type 			Data Length 			  Description
-user     			character			1 - reasonable number	  The variable where the user inserts their username to sign into the system
-password			character			1 - reasonable number	  The variable where the user inertts their password to sign into the system
+Data Name 		Data Type 		Data Length 			      Description                                                                   Example
+username    	varchar 			1 - 45                	The variable where the user inserts their username to sign into the system    "KimberlyJackson" or "Kimberlyjackson123"
+password			varchar 			1 - 45               	  The variable where the user inertts their password to sign into the system    "MyAptNumber" or "MyAptNumber943"
 login				  function			N/A						          Function to login into the system by checking username and password
-name          character     1 - reasonable number   Name of tenant
-aptunit       int           1-2                     Apt number of user
-tme           character     N/A                     The time slot the user has made an appointment for
-date          character     N/A                     The date/day the user has made an appointment for
+name          varchar       1 - 45                  Name of tenant                                                                "Kimberly A. Jackson" or "Douglas Potter"
+aptunit       int           1-2                     Apt number of user                                                             "1" or "20"
+tme           varchar       1-45                    The time slot the user has made an appointment for                            "Monday" or "Friday"
+date          varchar       1-45                    The date/day the user has made an appointment for                             "3AM-6AM" or "6PM-9PM"
