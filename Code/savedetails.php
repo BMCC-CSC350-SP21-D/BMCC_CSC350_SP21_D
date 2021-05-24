@@ -10,25 +10,34 @@ if ($conn->connect_error)
 }
 else
 {
-	$query = "SELECT * FROM appointment WHERE date='$date' AND time ='$time'";
-	$results = mysqli_query($conn, $query);
-	if(mysqli_num_rows($results) != 1)
+	$query2 = "SELECT * FROM appointment WHERE Name = '$name'";
+	$results2 = mysqli_query($conn, $query2);
+	if(mysqli_num_rows($results2) != 0)
 	{
-		$sql = "insert into appointment (Name,date,time,email)
-		values ('$name','$date','$time','$email')";
-		if (mysqli_query($conn, $sql)) 
-		{
-			echo "Appointment created successfully";
-		}
-		else 
-		{
-			echo "Error: " . $sql . "<br>" . $conn->error;
-		}
+		echo"Error: You already have an appointment made";
 	}
 	else
 	{
-		echo"Error: The day/time slot has already been reserved";
-		echo "<br>";
+		$query = "SELECT * FROM appointment WHERE date='$date' AND time ='$time'";
+		$results = mysqli_query($conn, $query);
+		if(mysqli_num_rows($results) != 0)
+		{
+			echo"Error: This slot is already taken";
+		}
+		else
+		{
+			$sql = "insert into appointment (Name,date,time,email)
+			values ('$name','$date','$time','$email')";
+			if (mysqli_query($conn, $sql)) 
+			{
+				echo "Appointment created successfully";
+				echo "<br>";
+			}
+			else 
+			{
+				echo "Error: " . $sql . "<br>" . $conn->error;
+			}
+		}
 	}
 }
 ?>
