@@ -8,7 +8,7 @@
         die("Failed to connect : ".$con->connect_error);
     }
     else {
-        $stmt = $con->prepare("select * from user where username = ?");
+        $stmt = $con->prepare("select * from user where username = ?"); //looks for username and if it is found, code will fetch the associating data in this case password
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $stmt_result = $stmt->get_result();
