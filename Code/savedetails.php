@@ -12,15 +12,15 @@ else
 {
 	$query2 = "SELECT * FROM appointment WHERE Name = '$name'";
 	$results2 = mysqli_query($conn, $query2);
-	if(mysqli_num_rows($results2) != 0)
+	if(mysqli_num_rows($results2) != 0) //Checks if user has already made an appointment
 	{
 		echo"Error: You already have an appointment made";
 	}
 	else
 	{
-		$query = "SELECT * FROM appointment WHERE date='$date' AND time ='$time'";
+		$query = "SELECT * FROM appointment WHERE date='$date' AND time ='$time'"; 
 		$results = mysqli_query($conn, $query);
-		if(mysqli_num_rows($results) != 0)
+		if(mysqli_num_rows($results) != 0) //Checks if day/time slot has already been booked by another user
 		{
 			echo"Error: This slot is already taken";
 		}
